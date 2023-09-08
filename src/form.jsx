@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export const FormComponent = () => {
   const [newTask, setNewTask] = useState('');
-  const [todos, setTodos] = useState([]);
   
   const submitHandler = (e) => {
     e.preventDefault();
@@ -12,7 +11,7 @@ export const FormComponent = () => {
       }
     ])
   }
-  
+
   return (
     <form onSubmit={submitHandler}>
       <label htmlFor="text">Add Task</label>
