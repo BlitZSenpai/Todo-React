@@ -1,5 +1,5 @@
-import { TaskItem } from "./taskitem"
 import PropTypes from "prop-types";
+import { TaskItem } from "./taskitem"
 
 export const TaskList = ({todos, removeTask, toggleTodo}) => {
   return (

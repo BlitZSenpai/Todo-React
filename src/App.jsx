@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import './App.css'
+import { useEffect, useState } from 'react';
+
 import { FormComponent } from './form';
 import { TaskList } from './task-list';
+import './App.css'
 
 function App() {
   const [todos, setTodos] = useState(() => {
@@ -10,6 +11,11 @@ function App() {
 
     return JSON.parse(localValue)
   })
+
+    useEffect(() => {
+    localStorage.setItem("ITEMS", JSON.stringify(todos))
+  }, [todos])
+
   const addTask = (title) => {
     setTodos((currentTodos) => {
       return[
