@@ -1,11 +1,11 @@
 import { TaskItem } from "./taskitem"
 import PropTypes from "prop-types";
 
-export const TaskList = ({todos}) => {
+export const TaskList = ({todos, removeTask, toggleTodo}) => {
   return (
     <ul>
       {todos.map((todo) => (
-        <TaskItem key={todo.id} todo={todo} />
+        <TaskItem key={todo.id} removeTask={removeTask} {...todo} toggleTodo={toggleTodo} />
       ))}
     </ul>
   )
@@ -19,4 +19,6 @@ TaskList.propTypes = {
       completed: PropTypes.bool.isRequired
     })
   ).isRequired,
+  removeTask: PropTypes.func,
+  toggleTodo: PropTypes.func,
 };

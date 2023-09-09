@@ -1,21 +1,21 @@
 import PropTypes from "prop-types";
 
-export const TaskItem = ({todo}) => {
+export const TaskItem = ({id, title, completed, removeTask, toggleTodo}) => {
   return (
-      <li key={todo.id}>
+      <li>
         <label>
-          <input type="checkbox" checked={todo.completed}/>
-          {todo.title}
+          <input type="checkbox" checked={completed} onChange={(e) => toggleTodo(id, e.target.checked)} />
+          {title}
         </label>
-        <button>remove</button>
+        <button onClick={() => removeTask(id)}>remove</button>
       </li>
   )
 }
 
 TaskItem.propTypes = {
-  todo: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-  }).isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  removeTask: PropTypes.func.isRequired,
+  toggleTodo: PropTypes.func.isRequired,
 };
