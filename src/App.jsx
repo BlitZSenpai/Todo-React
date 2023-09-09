@@ -24,23 +24,24 @@ function App() {
       }
     ]})
   }
-  
+
   const toggleTodo = (id, completed) => {
-    setTodos((currentTodos) => {
-      return currentTodos.map((todo) => {
+    setTodos((currentTodos) => (
+      currentTodos.map((todo) => {
         if(todo.id === id) {
-          return {...todo, completed}
+          return { ...todo, completed }
         }
         return todo
       })
-    })
+    ))
   }
-
+  
   const removeTask = (id) => {
-    setTodos((currentTodo) => {
-      return currentTodo.filter((todo) => todo.id !== id)
-    })
+    setTodos((currentTodos) => (
+      currentTodos.filter((todo) => todo.id !== id)
+    ))
   }
+  
   return (
     <>
       <FormComponent addTask={addTask}/>

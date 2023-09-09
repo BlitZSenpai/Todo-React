@@ -13,7 +13,7 @@ export const TaskItem = ({id, title, completed, removeTask, toggleTodo}) => {
 }
 
 TaskItem.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
   removeTask: PropTypes.func.isRequired,
