@@ -1,15 +1,15 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-export const FormComponent = () => {
+export const FormComponent = ({addTask}) => {
   const [newTask, setNewTask] = useState('');
   
   const submitHandler = (e) => {
     e.preventDefault();
-    setTodos((currentTodos) => [
-      ...currentTodos, {
-        id: crypto.randomUUID(), title: newTask, completed: false
-      }
-    ])
+    if(newTask === "") return
+    addTask(newTask)
+    
+    setNewTask("");
   }
 
   return (
@@ -19,4 +19,8 @@ export const FormComponent = () => {
         <button className="btn">Add</button>
     </form>
   )
+}
+
+FormComponent.propTypes = {
+  addTask: PropTypes.func
 }

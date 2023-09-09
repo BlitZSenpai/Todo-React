@@ -10,9 +10,17 @@ function App() {
 
     return JSON.parse(localValue)
   })
+  const addTask = (title) => {
+    setTodos((currentTodos) => {
+      return[
+      ...currentTodos, {
+        id: crypto.randomUUID(), title, completed: false
+      }
+    ]})
+  }
   return (
     <>
-      <FormComponent setTodos={setTodos} />
+      <FormComponent addTask={addTask}/>
       <TaskList todos={todos} />
     </>
   )
