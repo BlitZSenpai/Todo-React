@@ -3,7 +3,7 @@ import { TaskItem } from "./taskitem"
 
 export const TaskList = ({todos, removeTask, toggleTodo}) => {
   return (
-    <ul>
+    <ul className="task-list-container">
       {todos.length === 0 && "no tasks created"}
       {todos.map((todo) => (
         <TaskItem key={todo.id} removeTask={removeTask} {...todo} toggleTodo={toggleTodo} />

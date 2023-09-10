@@ -14,9 +14,9 @@ export const FormComponent = ({addTask}) => {
   }
 
   return (
-    <form onSubmit={submitHandler}>
-      <label htmlFor="text">Add Task</label>
-        <input value={newTask} type="text" id="text" onChange={e => setNewTask(e.target.value)}/>
+    <form onSubmit={submitHandler} className="form-container">
+      <label htmlFor="text" className="text-label">Add Task</label>
+        <input value={newTask} type="text" id="text" onChange={e => setNewTask(e.target.value)} className="input-box"/>
         <button className="btn">Add</button>
     </form>
   )

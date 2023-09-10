@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 
 export const TaskItem = ({id, title, completed, removeTask, toggleTodo}) => {
   return (
-      <li>
-        <label>
+      <li className="list-container">
+        <label className="task-label">
           <input type="checkbox" checked={completed} onChange={(e) => toggleTodo(id, e.target.checked)} />
           {title}
         </label>
-        <button onClick={() => removeTask(id)}>remove</button>
+        <button onClick={() => removeTask(id)} className="task-btn">remove</button>
       </li>
   )
 }
