@@ -19,3 +19,19 @@ body {
   height: 50px;
   row-gap: 10px;
 }
+
+.btn {
+  color: blueviolet;
+  border-radius: 10px;
+}
+
+.task-btn {
+  color: black;
+  border-radius: 10px;
+}
+
+.input-box {
+  border-radius: 15px;
+  width: 100px;
+  height: 20px;
+}
