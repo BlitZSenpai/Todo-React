@@ -40,3 +40,13 @@ body {
   font-size: large;
   font-weight: bolder;
 }
+
+.task-label {
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+l1 {
+  list-style: none;
+  list-style-type: none;
+}
