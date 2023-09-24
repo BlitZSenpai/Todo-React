@@ -4,7 +4,7 @@ export const TaskItem = ({id, title, completed, removeTask, toggleTodo}) => {
   return (
       <li className="list-container">
         <label className="task-label">
-          <input type="checkbox" checked={completed} onChange={(e) => toggleTodo(id, e.target.checked)} />
+          <input className="checkbox" type="checkbox" checked={completed} onChange={(e) => toggleTodo(id, e.target.checked)} />
           {title}
         </label>
         <button onClick={() => removeTask(id)} className="task-btn">remove</button>

@@ -44,9 +44,15 @@ body {
 .task-label {
   font-weight: bolder;
   font-size: 10px;
+  width: 100px;
+  height: 200px;
 }
 
-l1 {
+ul l1 {
   list-style: none;
   list-style-type: none;
+}
+
+.checkbox {
+  color: black;
 }
