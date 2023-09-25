@@ -25,9 +25,17 @@ body {
   border-radius: 10px;
 }
 
+.btn:hover {
+  color: #5C5470;
+}
+
 .task-btn {
   color: black;
   border-radius: 10px;
+}
+
+.task-btn:hover {
+  color: red;
 }
 
 .input-box {
