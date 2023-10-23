@@ -45,10 +45,10 @@ function App() {
 	};
 
 	return (
-		<>
+		<div className="main">
 			<FormComponent addTask={addTask} />
 			<TaskList todos={todos} removeTask={removeTask} toggleTodo={toggleTodo} />
-		</>
+		</div>
 	);
 }
 

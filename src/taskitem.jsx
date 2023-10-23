@@ -12,8 +12,8 @@ export const TaskItem = ({ id, title, completed, removeTask, toggleTodo }) => {
 				/>
 				{title}
 			</label>
-			<button onClick={() => removeTask(id)} className="task-btn">
-				remove
+			<button onClick={() => removeTask(id)} className="btn">
+				Remove
 			</button>
 		</li>
 	);
