@@ -15,13 +15,11 @@ export const FormComponent = ({ addTask }) => {
 
 	return (
 		<form onSubmit={submitHandler} className="form-container">
-			<label htmlFor="text" className="form-label">
-				Add Task
-			</label>
 			<input
 				value={newTask}
 				type="text"
 				id="text"
+				placeholder="Add Task"
 				onChange={(e) => setNewTask(e.target.value)}
 				className="form-input"
 			/>
