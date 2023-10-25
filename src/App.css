@@ -1,52 +1,45 @@
-html,
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
 body {
-  margin: 0;
-  padding: 0;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
 }
 
-.main {
-  height: 100vh;
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
 }
 
-.form-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+input,
+button,
+textarea,
+select {
+	font: inherit;
 }
 
-.form-label {
-  margin-right: 10px;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
 }
 
-.task-list-container li {
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.task-label {
-  margin-right: 30px;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn {
-  border-radius: 5px;
-  padding: 5px;
-  margin-left: 5px;
-  background-color: #232D3F;
-  color: rgb(255 255 255);
-}
-
-.form-input {
-  border-radius: 5px;
-}
-
-checkbox {
-  margin-right: 50px;
+#root,
+#__next {
+	isolation: isolate;
 }
