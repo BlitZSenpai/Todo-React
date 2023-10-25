@@ -53,10 +53,50 @@ h6 {
 	align-items: center;
 	background-color: #1f1f1f;
 	color: white;
+	position: relative;
 }
 
 .form-container {
 	margin-bottom: 1rem;
 	position: absolute;
-	top: 20%;
+	top: 28%;
+	left: 42.2%;
+}
+
+input {
+	border-radius: 5px;
+	margin-right: 1rem;
+}
+
+li {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+.form-btn {
+	background-color: #fff6f6;
+	border: none;
+	border-radius: 5px;
+	width: 65px;
+	height: 33px;
+}
+
+.btn {
+	background-color: #fff6f6;
+	border: none;
+	margin-left: 1rem;
+	border-radius: 5px;
+}
+
+.task-item-container {
+	width: auto;
+}
+
+ul li {
+	display: flex;
+	justify-content: space-between;
+}
+
+button:hover {
+	cursor: pointer;
 }

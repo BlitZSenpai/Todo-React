@@ -23,7 +23,7 @@ export const FormComponent = ({ addTask }) => {
 				onChange={(e) => setNewTask(e.target.value)}
 				className="form-input"
 			/>
-			<button className="btn">Add</button>
+			<button className="form-btn">Add</button>
 		</form>
 	);
 };
